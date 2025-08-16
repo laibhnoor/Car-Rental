@@ -1,0 +1,26 @@
+# ---- Node (React client) ----
+client/node_modules/
+client/build/
+client/.env
+
+# Logs
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# ---- Python (Flask server) ----
+flask-server/__pycache__/
+flask-server/*.pyc
+flask-server/instance/
+flask-server/.pytest_cache/
+flask-server/.env
+
+# ---- Virtual Environments ----
+env/
+venv/
+.venv/
+
+# ---- System / Editor files ----
+*.DS_Store
+*.vscode/
+*.idea/
