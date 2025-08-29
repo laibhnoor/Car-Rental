@@ -1,0 +1,36 @@
+# Car Rental App
+
+## Description
+A full-stack Car Rental application with a React frontend and Flask backend.
+
+## Features
+- User authentication (JWT)
+- Browse and book cars
+- Admin can manage cars and bookings
+- Responsive design using Tailwind CSS
+
+## Technologies
+- Frontend: React, Tailwind CSS, Axios, Vite
+- Backend: Flask, SQLAlchemy, Flask-JWT-Extended
+- Database: SQLite (development)
+
+  ## Installation
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+2. Install backend dependencies:
+   cd flask-server
+   pip install -r requirements.txt
+3. Install frontend dependencies:
+   cd ../client
+   npm install
+4. Run backend:
+   flask run
+5. Run frontend:
+   npm run dev
+
+Usage
+
+Open your browser and go to http://localhost:5173 (Vite default port)
+
+Login or register, then browse cars and make bookings.
