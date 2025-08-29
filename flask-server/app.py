@@ -27,13 +27,13 @@ db.init_app(app)
 def add_initial_cars():
     if Car.query.count() == 0:
         cars_to_add = [
-            # Add price_per_day to each car
-            Car(name="Toyota Camry", image="...", transmission="Automatic", fuel_type="Gasoline", seats=5, price_per_day=55.0),
-            Car(name="Honda Civic", image="...", transmission="Automatic", fuel_type="Gasoline", seats=5, price_per_day=50.0),
-            Car(name="Ford Mustang", image="...", transmission="Manual", fuel_type="Gasoline", seats=4, price_per_day=75.0),
-            Car(name="Tesla Model 3", image="...", transmission="Automatic", fuel_type="Electric", seats=5, price_per_day=90.0),
-            Car(name="Jeep Wrangler", image="...", transmission="Automatic", fuel_type="Gasoline", seats=4, price_per_day=80.0),
-            Car(name="BMW 3 Series", image="...", transmission="Automatic", fuel_type="Gasoline", seats=5, price_per_day=85.0)
+            # Use public folder paths - these will be served by Vite
+            Car(name="Toyota Camry", image="/images/toyota.jpg", transmission="Automatic", fuel_type="Gasoline", seats=5, price_per_day=55.0),
+            Car(name="Honda Civic", image="/images/honda.jpg", transmission="Automatic", fuel_type="Gasoline", seats=5, price_per_day=50.0),
+            Car(name="Ford Mustang", image="/images/fordmustang.jpg", transmission="Manual", fuel_type="Gasoline", seats=4, price_per_day=75.0),
+            Car(name="Tesla Model 3", image="/images/teslamodel3.jpg", transmission="Automatic", fuel_type="Electric", seats=5, price_per_day=90.0),
+            Car(name="Jeep Wrangler", image="/images/jeepwrangler3.jpg", transmission="Automatic", fuel_type="Gasoline", seats=4, price_per_day=80.0),
+            Car(name="BMW 3 Series", image="/images/bmw3seris.jpg", transmission="Automatic", fuel_type="Gasoline", seats=5, price_per_day=85.0)
         ]
         db.session.bulk_save_objects(cars_to_add)
         db.session.commit()

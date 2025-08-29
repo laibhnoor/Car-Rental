@@ -6,11 +6,27 @@ import axios from "axios";
 import AuthContext from "../context/AuthContext";
 import BookingModal from "../components/BookingModal"; // <-- Import the modal
 
+// Create a mapping of car names to images
+const carImages = {
+  'Toyota Camry': '/images/toyota.jpg',
+  'Honda Civic': '/images/honda.jpg',
+  'Ford Mustang': '/images/fordmustang.jpg',
+  'Tesla Model 3': '/images/teslamodel3.jpg',
+  'Jeep Wrangler': '/images/jeepwrangler.jpg',
+  'BMW 3 Series': '/images/bmw3seris.jpg',
+};
+
+
 // --- CarCard component: Add onBookNow prop ---
 function CarCard({ car, onBookNow }) { // <-- Add onBookNow prop
+ 
+ // Get the image from the mapping, fallback to placeholder
+ const imageUrl = carImages[car.name] || placeholderImg;
+ 
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-      <img src={car.image} alt={car.name} className="w-full h-48 object-cover" />
+      <img src={imageUrl} alt={car.name} className="w-full h-48 object-cover" 
+      onError={(e) => { e.target.src = placeholderImg; }}/>
       <div className="p-4">
         <h3 className="text-xl font-bold mb-2">{car.name}</h3>
         <div className="text-gray-600 text-sm mb-4">
