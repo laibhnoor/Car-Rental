@@ -35,4 +35,8 @@ Open your browser and go to http://localhost:5173 (Vite default port)
 
 Login or register, then browse cars and make bookings.
 <img width="1600" height="828" alt="image" src="https://github.com/user-attachments/assets/f4847b39-cfcb-4ca8-831e-5fdcb09217c7" />
+<img width="1600" height="828" alt="image" src="https://github.com/user-attachments/assets/2d6f5c01-3d50-40b5-b21b-7d30aee4adaa" />
+<img width="1600" height="828" alt="image" src="https://github.com/user-attachments/assets/94907e2b-6495-4824-9862-99e1d1d6b25a" />
+
+
 
